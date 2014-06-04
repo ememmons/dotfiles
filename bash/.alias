@@ -77,3 +77,8 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 alias ss='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
+# Minecraft
+alias mcs="cd ~/Desktop/minecraft\ serve && exec java -Xmx2G -jar minecraft_server.jar nogui"
+alias mcfs164="cd ~/Desktop/minecraft\ forge\ server\ 164 && exec java -Xmx2G -jar forge-1.6.4-9.11.1.965-universal.jar nogui"
+alias mcfs172="cd ~/Desktop/minecraft\ forge\ server\ 172 && exec java -Xmx2G -jar forge-1.7.2-10.12.1.1060-universal.jar nogui"
+alias mcbs="cd ~/Desktop/minecraft\ bukkit\ server && java -Xmx2G -jar craftbukkit.jar -o true"
