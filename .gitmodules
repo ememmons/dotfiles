@@ -1,6 +1,0 @@
-[submodule "git"]
-	path = git
-	url = git@github.com:nuttzman/git-scripts.git
-[submodule "bash"]
-	path = bash
-	url = git@github.com:nuttzman/bash-scripts.git
