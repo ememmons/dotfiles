@@ -1,10 +1,11 @@
-[user]
+ [user]
 	name = Eric Emmons
 	email = eric.emmons@gmail.com
+	signingkey = 27CB3D845C6EC4F3
 [core]
 	whitespace = trailing-space, space-before-tab
 	excludesfile = ~/.gitignore_global
-	editor = sublime -n -w
+	editor = code -w
 [color]
 	diff = auto
 	status = auto
@@ -32,8 +33,8 @@
 [merge]
 	stat = true
 	tool = Kaleidoscope
-[mergetool "sublime"]
-	cmd = sublime -w $MERGED
+[mergetool "code"]
+	cmd = code -w $MERGED
 	trustExitCode = false
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
@@ -51,7 +52,7 @@
 	prompt = false
 
 [github]
-	user = nuttzman
+	user = ememmons
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -269,3 +270,16 @@
 
 	pconfig = config -f .git/config
 
+[merge "ours"]
+	driver = true
+[git-up "rebase"]
+	auto = false
+[credential]
+	helper = osxkeychain
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
